@@ -471,6 +471,11 @@ pub async fn rebuild_history(settings: &Settings) -> Result<()> {
     Ok(())
 }
 
+pub async fn import_history(settings: &Settings, histories: Vec<History>) -> Result<()> {
+    try_with_restart(settings, async |client| client.import_history(histories).await).await?;
+    Ok(())
+}
+
 pub async fn compact_store(settings: &Settings) -> Result<u64> {
     let reply = try_with_restart(settings, async |client| client.compact_store().await).await?;
     Ok(reply.rewritten)
