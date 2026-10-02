@@ -1,7 +1,6 @@
 name: Installer compatibility
 
 on:
-  workflow_dispatch:
   pull_request:
     paths:
       - install.sh
