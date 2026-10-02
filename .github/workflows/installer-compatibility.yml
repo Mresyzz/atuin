@@ -48,9 +48,6 @@ jobs:
           network: bridge
           packages: |
             curl
-            ca-certificates
-            tar
-            gzip
           output: reports/opsscript-gate-${{ matrix.id }}.json
 
       - name: Upload compatibility report
