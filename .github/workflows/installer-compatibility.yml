@@ -40,7 +40,7 @@ jobs:
           persist-credentials: false
 
       - name: Check installer compatibility
-        uses: Mresyzz/opsscript-gate@v0.8.0
+        uses: Mresyzz/opsscript-gate@v0.8.1
         with:
           script-path: install.sh
           shell: auto
